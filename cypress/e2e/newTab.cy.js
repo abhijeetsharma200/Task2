@@ -12,9 +12,9 @@ describe('Product test', () => {
           // Log the product link in the browser's console
           cy.log("Product link:", $product.attr('href'));
           // limit the number of products to 11
-          let maxIndex = 11;
+          let maxIndex = 10;
           // Get the price of the product
-          cy.get('.price-original', { $product }).eq(index < maxIndex ? index : maxIndex)
+          cy.get('.lh30.cl-dark.weight-300.fs-medium-small', { $product }).eq(index < maxIndex ? index : maxIndex)
             .then(($price) => cy.log("Price:", $price.text()));
           // Get the title of the product
           cy.get('.product-name').eq(index < maxIndex ? index : maxIndex)
